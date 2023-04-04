@@ -145,6 +145,12 @@ $is_checked = 'checked="checked"';
                          <input type="text" name="name" class="form-control" required="required" placeholder="{{__('Name')}}" value="{{old('name')}}">
 
                          @if ($errors->has('name')) <span class="help-block"> <strong>{{ $errors->first('name') }}</strong> </span> @endif </div>
+                         
+                    <div class="formrow{{ $errors->has('phone') ? ' has-error' : '' }}">
+
+                        <input type="text" name="phone" class="form-control" placeholder="{{__('Phone Number')}}" value="{{old('phone')}}">
+
+                        @if ($errors->has('phone')) <span class="help-block"> <strong>{{ $errors->first('phone') }}</strong> </span> @endif </div>
 
                      <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
 

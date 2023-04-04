@@ -29,6 +29,7 @@ class CompanyFrontRegisterFormRequest extends Request
         return [
             'name' => 'required|max:150',
             'email' => 'required|unique:companies,email|email|max:100',
+            'phone' => 'required|max:30',
             'password' => 'required|confirmed|min:6|max:50',
             'terms_of_use' => 'required',
             'g-recaptcha-response' => 'required|captcha',
@@ -42,6 +43,7 @@ class CompanyFrontRegisterFormRequest extends Request
             'email.required' => __('Email is required'),
             'email.email' => __('The email must be a valid email address'),
             'email.unique' => __('This Email has already been taken'),
+            'phone.required' => __('Phone number is required'),
             'password.required' => __('Password is required'),
             'password.min' => __('The password should be more than 3 characters long'),
             'terms_of_use.required' => __('Please accept terms of use'),
